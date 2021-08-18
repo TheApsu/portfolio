@@ -9,6 +9,10 @@ a{
     text-decoration: none;
 }
 
+body{
+    width:fit-content;
+}
+
 /*MENU*/
 
 header{
@@ -432,9 +436,6 @@ footer{
 /* Media queries */
 
 @media screen and (max-width: 500px){
-    body{
-        width: 100%;
-    }
     .projects-container__content{
         flex-basis: 90%;
     }
