@@ -10,12 +10,13 @@ a{
 }
 
 body{
-    min-width: 700px;
+    min-width: 400px;
 }
 
 /*MENU*/
 
 header{
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -59,7 +60,6 @@ header{
 /* PRESENTATION  */
 
 .main{
-    overflow-x: hidden;
 
 }
 
@@ -87,9 +87,6 @@ header{
 @keyframes previewHide {
     0%{
         transform: translate(0px);
-    }
-    50%{
-        transform: translate(150px); 
     }
     100%{
         height: 0px;
