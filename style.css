@@ -9,14 +9,14 @@ a{
     text-decoration: none;
 }
 
-body{
-    width:fit-content;
+html{
+    width: fit-content;
 }
 
 /*MENU*/
 
+
 header{
-    width: 100%;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -59,10 +59,6 @@ header{
 
 /* PRESENTATION  */
 
-.main{
-
-}
-
 #preview{
     display: flex;
     justify-content: center;
@@ -71,8 +67,6 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 1s;
-    height: 100vh;
-    min-height: 200px;
 }
 @keyframes previewShow{
     0%{
@@ -436,7 +430,7 @@ footer{
 /* Media queries */
 
 @media screen and (max-width: 500px){
-    .projects-container__content{
+   .projects-container__content{
         flex-basis: 90%;
     }
 }
