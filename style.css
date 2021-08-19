@@ -67,6 +67,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 1s;
+    height: 100vh;
 }
 @keyframes previewShow{
     0%{
@@ -251,7 +252,6 @@ header{
     opacity: 0;
     user-select: none;
     text-align: left;
-    border-bottom: 3px solid #2af;
 
 }
 
@@ -261,7 +261,7 @@ header{
         opacity: 0;
     }
     100%{
-        height: 300px;
+        height: fit-content;
         opacity: 1;
     }
 }
@@ -429,8 +429,23 @@ footer{
 
 /* Media queries */
 
-@media screen and (max-width: 500px){
-   .projects-container__content{
-        flex-basis: 90%;
+@media screen and (max-width: 480px){
+    .projects-container__content{
+        flex-basis: 80%;
+    }
+    .content h1{
+        font-size: 20px;
+        padding: 20px;
+    }
+    .title-section{
+        font-size: 20px;
+        padding: 15px;
+    }
+    #preview p{
+        width: 90%;
+        text-align: center;
+    }
+    body{
+        width: auto;
     }
 }
