@@ -454,6 +454,18 @@ footer{
     .container .box .imgBx img{
         object-fit: scale-down;
     }
+    .container .box::before{
+        content: 'Tap the image';
+        color:#fff;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+    }
     .content h1{
         font-size: 20px;
         padding: 20px;
