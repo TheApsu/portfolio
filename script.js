@@ -4,13 +4,14 @@ const $nav = document.getElementById('nav-menu');
 const $preview = document.getElementById('preview');
 const $flexContent = document.querySelector('.flex-content');
 const $flexBox = document.querySelectorAll('.flex-content__child');
-const $btnShowInfo = document.querySelectorAll('.btn-seeInfo');
 const $platformsContent = document.querySelector('.content__platforms');
 const $git = document.getElementById('git');
 const $gitHub = document.getElementById('github');
+const $btnGoToSite = document.querySelectorAll('.btn-go-to-site');
+
 
 const options = {
-    threshold: .5   
+    threshold: .3   
 }
 
 const showPlatformContent = entries => {
@@ -32,27 +33,11 @@ const changeBackgroundBtnColor = (btn ,fontColor, bgColor) => {
     btn.style.background = bgColor;
 }
 
-for(let i = 0; i < $btnShowInfo.length; i++){
-    $btnShowInfo[i].addEventListener('click', e => {
-        if(e.path[0].classList.value.includes('show')){
-            
-            $btnShowInfo[i].textContent = 'SHOW INFORMATION'
-            $btnShowInfo[i].removeAttribute('style')
-            e.path[2].childNodes[3].style.animation = 'desaparecer .2s both'; 
-            e.path[0].classList.remove('show');
-            e.path[3].removeAttribute('style')
-
-        }else {          
-            $btnShowInfo[i].textContent = 'HIDE INFORMATION'
-            changeBackgroundBtnColor($btnShowInfo[i], '#fff', '#2af')
-            e.path[2].childNodes[3].style.animation = 'aparecer .2s both';
-            e.path[0].classList.add('show');
-            e.path[3].style.flexBasis = '90%'
-        }
+for (let i = 0; i < $btnGoToSite.length; i++) {
+    $btnGoToSite[i].addEventListener('click', e => {
+        window.open($btnGoToSite[i].childNodes[0].href)
     })
 }
-
-
 
 
 const aparecer = entries => {
@@ -73,10 +58,10 @@ const observer2 = new IntersectionObserver(aparecer, options)
 observer2.observe($flexContent)
 
 window.addEventListener('scroll', e => {
-    let Y1 = 80 - scrollY;
+    let Y1 = 100 - scrollY;
     if(scrollY == 0){
-        $preview.style.animation = 'previewShow 1s forwards'
+        $preview.style.animation = 'previewShow 1.5s forwards'
     }else{
-        $preview.style.animation = 'previewHide 1s forwards'
+        $preview.style.animation = 'previewHide 1.5s forwards'
     }
 })
