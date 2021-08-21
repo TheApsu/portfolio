@@ -325,20 +325,18 @@ header{
     transform: translateX(0px);
 }
 
-.container .box .content .btn-go-to-site{
-    cursor: pointer;
+.container .box .content .go-to-site{
     border: none;
     outline: none;
     background: #fff;
     opacity: 0;
     transition: .7s;
-    padding: 15px;
-}
-.container .box .content .btn-go-to-site a {
+    padding: 12px; 
     color: #2af;
     text-decoration: none;
 }
-.container .box:hover .content .btn-go-to-site{
+
+.container .box:hover .content .go-to-site{
     transition-delay: 200ms;
     opacity: 1;
 }
